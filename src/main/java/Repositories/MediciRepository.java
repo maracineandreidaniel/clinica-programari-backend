@@ -34,10 +34,10 @@ public class MediciRepository {
     }
 
 
-    public void insertMedic(Client client) {
+    public void insertMedic(Medic medic) {
         String insertTo = " ";
         insertTo = insertTo + "insert into medici (nume,parola) values (";
-        insertTo = insertTo + String.format("'%s','%s'",client.getNume(),client.getParola());
+        insertTo = insertTo + String.format("'%s','%s'",medic.getNume(),medic.getParola());
         insertTo = insertTo + ");";
         this.executeStatement(insertTo);
     }
